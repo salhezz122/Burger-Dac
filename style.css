@@ -90,16 +90,7 @@ button:hover {
     text-align: center;
 }
  
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: 
-        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
+
 
 /* ===== Admin Page Fix ===== */
 .admin-page {
@@ -134,16 +125,7 @@ html, body {
     height: 100%;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("images/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 
 body {
     background: red;
