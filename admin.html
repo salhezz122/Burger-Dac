@@ -6,22 +6,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="admin-page">
 
-<h2 class="center">Admin Login</h2>
-<div class="admin-box">
-    <input type="password" id="adminPass" placeholder="Password">
-    <button onclick="login()">Login</button>
+    <div class="admin-box">
+        <h2 class="center">Admin Login</h2>
 
-    <div id="adminPanel" style="display:none;">
-        <input type="text" id="itemName" placeholder="Item name">
-        <input type="number" id="itemPrice" placeholder="Price">
-        <input type="text" id="itemImage" placeholder="Image path (images/burger.jpg)">
-        <button onclick="addItem()">Add Item</button>
+        <input type="password" id="adminPass" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
 
-        <ul id="adminMenu"></ul>
+        <div id="adminPanel" style="display:none;">
+            <h3>Manage Menu</h3>
+
+            <input type="text" id="itemName" placeholder="Item name">
+            <input type="number" id="itemPrice" placeholder="Price">
+            <input type="file" id="itemImage" accept="image/*">
+
+            <button onclick="addItem()">Add Item</button>
+
+            <ul id="adminMenu"></ul>
+        </div>
     </div>
-</div>
 
+</div>
 <script src="script.js"></script>
 </body>
+
 </html>
