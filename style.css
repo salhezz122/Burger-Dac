@@ -145,3 +145,6 @@ body {
     background-repeat: no-repeat;
 }
 
+body {
+    background: red;
+}
