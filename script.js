@@ -1,6 +1,14 @@
 let menu = JSON.parse(localStorage.getItem("menu")) || [
-    { name: "Burger", price: 5 },
-    { name: "Pizza", price: 7 }
+    {
+        name: "Burger",
+        price: 5,
+        image: "images/burger.jpg"
+    },
+    {
+        name: "Pizza",
+        price: 7,
+        image: "images/pizza.jpg"
+    }
 ];
 
 function saveMenu() {
@@ -10,12 +18,18 @@ function saveMenu() {
 function displayMenu() {
     let menuDiv = document.getElementById("menu");
     if (!menuDiv) return;
+
     menuDiv.innerHTML = "";
     menu.forEach(item => {
-        menuDiv.innerHTML += `<div>
-            <span>${item.name}</span>
-            <span>$${item.price}</span>
-        </div>`;
+        menuDiv.innerHTML += `
+        <div class="card">
+            <img src="${item.image}">
+            <div class="card-body">
+                <h3>${item.name}</h3>
+                <p class="price">$${item.price}</p>
+            </div>
+        </div>
+        `;
     });
 }
 
@@ -34,7 +48,14 @@ function login() {
 function addItem() {
     let name = document.getElementById("itemName").value;
     let price = document.getElementById("itemPrice").value;
-    menu.push({ name, price });
+    let image = document.getElementById("itemImage").value;
+
+    if (!name || !price || !image) {
+        alert("Fill all fields");
+        return;
+    }
+
+    menu.push({ name, price, image });
     saveMenu();
     showAdminMenu();
 }
@@ -47,13 +68,16 @@ function deleteItem(index) {
 
 function showAdminMenu() {
     let list = document.getElementById("adminMenu");
+    if (!list) return;
+
     list.innerHTML = "";
     menu.forEach((item, index) => {
         list.innerHTML += `
         <li>
             ${item.name} - $${item.price}
-            <button onclick="deleteItem(${index})">X</button>
-        </li>`;
+            <button onclick="deleteItem(${index})">Delete</button>
+        </li>
+        `;
     });
 }
 
