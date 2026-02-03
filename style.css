@@ -1,20 +1,9 @@
-/* ================== GLOBAL ================== */
-html, body {
-    height: 100%;
-}
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("images/background.jpg"); /* حط صورة محلية */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #faf7f2;
 }
 
-/* ================== HEADER ================== */
 .header {
     background: #7b1e1e;
     color: white;
@@ -22,7 +11,6 @@ body {
     text-align: center;
 }
 
-/* ================== MENU GRID ================== */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -36,12 +24,12 @@ body {
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .menu-box img {
     width: 100%;
-    height: 130px;
+    height: 120px;
     object-fit: cover;
 }
 
@@ -58,10 +46,8 @@ body {
 .price {
     color: #7b1e1e;
     font-weight: bold;
-    font-size: 15px;
 }
 
-/* ================== FOOTER ================== */
 .footer {
     text-align: center;
     padding: 15px;
@@ -74,7 +60,58 @@ body {
     text-decoration: none;
 }
 
-/* ================== ADMIN PAGE ================== */
+/* Admin */
+.admin-box {
+    max-width: 350px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, button {
+    width: 80%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+button {
+    background: #7b1e1e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.center {
+    text-align: center;
+}
+ 
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url("images/food-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* ===== Admin Page Fix ===== */
 .admin-page {
     min-height: 100vh;
     display: flex;
@@ -87,58 +124,18 @@ body {
     padding: 25px;
     width: 320px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-.admin-box h2,
 .admin-box h3 {
+    margin-top: 20px;
     text-align: center;
-    margin-bottom: 15px;
 }
 
 .admin-box input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    margin: 12px 0;
 }
 
 .admin-box button {
-    width: 100%;
-    padding: 10px;
     margin-top: 10px;
-    background: #7b1e1e;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.admin-box button:hover {
-    opacity: 0.9;
-}
-
-.admin-box ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 15px;
-}
-
-.admin-box li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f2f2f2;
-    padding: 8px;
-    margin-bottom: 6px;
-    border-radius: 6px;
-}
-
-.admin-box li button {
-    width: auto;
-    padding: 5px 10px;
-    background: #b30000;
-}
-
-/* ================== UTIL ================== */
-.center {
-    text-align: center;
 }
